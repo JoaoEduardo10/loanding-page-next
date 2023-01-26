@@ -28,7 +28,6 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang='pt-br'>
 				<Head>
-					<link rel="stylesheet" href={'/css/fonts.css'} />
 				</Head>
 				<body>
 					<Main />

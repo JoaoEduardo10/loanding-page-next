@@ -1,15 +1,12 @@
 import { Meta, ComponentStory } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
-import { Heading, HeadingProps } from '.';
+import { Header } from '.';
 import { GlobalStyled } from '../../styles/globalStyles';
 import { theme } from '../../styles/theme';
 
 export default {
-	title: 'Heading',
-	component: Heading,
-	args: {
-		children: 'Heading'
-	} as HeadingProps,
+	title: 'Header',
+	component: Header,
 	decorators: [
 		(Story) => (
 			<ThemeProvider theme={theme}>
@@ -20,6 +17,6 @@ export default {
 	]
 } as Meta;
 
-export const Tamplate: ComponentStory<typeof Heading> = (agrs: HeadingProps) => {
-	return <Heading {...agrs} />;
+export const Tamplate: ComponentStory<typeof Header> = () => {
+	return <Header />;
 };

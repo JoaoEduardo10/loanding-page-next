@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from './theme';
 
 export const GlobalStyled = createGlobalStyle`
     * {
@@ -12,9 +13,18 @@ export const GlobalStyled = createGlobalStyle`
     }
 
     body {
-        background-color: ${({ theme }) => theme.black};
-        color: ${({ theme }) => theme.white};
+        background-color: ${({ theme }) => theme.colors.primaryColor};
+        color: ${({ theme }) => theme.colors.white};
         font-size: 1.6rem;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: ${theme.colors.white};
     }
 
 `;
