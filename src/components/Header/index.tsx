@@ -3,6 +3,7 @@ import * as S from './styles';
 import Logo from '../../../public/images/logo.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from '../Button';
 
 export const Header = () => {
 	return (
@@ -24,7 +25,7 @@ export const Header = () => {
 				</ul>
 			</S.Menu>
 			<S.Action>
-				<button>Fale conosco</button>
+				<Button title='Fale conosco' kind='premary' />
 			</S.Action>
 		</S.Conteiner>
 	);

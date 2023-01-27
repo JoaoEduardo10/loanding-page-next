@@ -2,12 +2,12 @@ import styled, { css } from 'styled-components';
 
 export const Conteiner = styled.header`
     ${({ theme }) => css`
-        padding: 3.4rem 18rem;
+        padding: 3.4rem 12rem;
         width: 100%;
         background-color: ${theme.colors.primaryColor};
         border-bottom: 0.5px solid ${theme.colors.mediumGray};
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        gap: 1.6rem;
         align-items: center;
         justify-content: space-between;
     `}
@@ -41,16 +41,7 @@ export const Menu = styled.nav`
 `;
 
 export const Action = styled.div`
-    ${({ theme }) => css`
-    
-        button {
-            padding: 1.5rem 5rem;
-            font-size: 1.6rem;
-            font-weight: bold;
-            background-color: ${theme.colors.secondaryColor};
-            color: ${theme.colors.white};
-            border: none;
-            border-radius: .5rem;
-        }
+    ${() => css`
+
     `}
 `;
