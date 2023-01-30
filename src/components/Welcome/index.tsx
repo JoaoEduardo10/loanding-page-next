@@ -13,7 +13,7 @@ export const Welcome = () => {
 				<Button title='Almentar vendas' kind='secondary' />
 			</S.Title>
 			<S.Image>
-				<Image src={Fundo} alt='fundo' width={300} height={300}/>
+				<Image src={Fundo} alt='fundo' width={535} height={383}/>
 			</S.Image>
 		</S.Conteiner>
 	);

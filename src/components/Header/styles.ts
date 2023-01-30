@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Conteiner = styled.header`
     ${({ theme }) => css`
-        padding: 3.4rem 12rem;
+        padding: 3rem 11.25rem;
         width: 100%;
         background-color: ${theme.colors.primaryColor};
         border-bottom: 0.5px solid ${theme.colors.mediumGray};

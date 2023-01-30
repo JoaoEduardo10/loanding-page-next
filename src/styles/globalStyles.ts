@@ -13,7 +13,7 @@ export const GlobalStyled = createGlobalStyle`
     }
 
     body {
-        background-color: #000;
+        background-color: ${({ theme }) => theme.colors.primaryColor};
         color: ${({ theme }) => theme.colors.white};
         font-size: 1.6rem;
     }
@@ -25,6 +25,11 @@ export const GlobalStyled = createGlobalStyle`
     a {
         text-decoration: none;
         color: ${theme.colors.white};
+        transition: all 300ms ease-in-out;
+    }
+
+    a:hover {
+        color: ${({ theme }) => theme.colors.secondaryColor};
     }
 
 `;
