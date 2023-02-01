@@ -35,6 +35,7 @@ export const Form = () => {
 			},
 			body: JSON.stringify(messageBody)
 		});
+		alert('Email enviado com sucesso');
 
 		setEmail('');
 		setName('');
