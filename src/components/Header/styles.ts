@@ -10,6 +10,19 @@ export const Conteiner = styled.header`
         gap: 1.6rem;
         align-items: center;
         justify-content: space-between;
+
+        @media ${theme.media.phone} {
+            padding: 1.6rem;
+        }
+
+        @media ${theme.media.tablet} {
+            padding: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media ${theme.media.lapTop} {
+            padding: 3rem;
+        }
     `}
 `;
 
@@ -22,11 +35,12 @@ export const LogoTipo = styled.div`
             width: 100%;
             height: 100%;
         }    
+
     `}
 `;
 
 export const Menu = styled.nav`
-    ${() => css`
+    ${({ theme }) => css`
         font-size: 2.2rem;
 
         ul {
@@ -37,11 +51,23 @@ export const Menu = styled.nav`
                 margin-left: 3.8rem;
             }
         }
+
+        @media ${theme.media.phone} {
+            display: none;
+        }
     `}
 `;
 
 export const Action = styled.div`
-    ${() => css`
+    ${({ theme }) => css`
 
+
+        @media ${theme.media.phone} {
+            display: none;
+        }
+
+        @media ${theme.media.tablet} {
+            display: none;
+        }
     `}
 `;

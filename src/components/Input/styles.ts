@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+import { fonts } from '../../styles/fonts';
+
 export const Conteiner = styled.input`
     ${({ theme }) => css`
         padding: 2.2rem 1.7rem;
@@ -12,6 +14,10 @@ export const Conteiner = styled.input`
 
         &:focus {
             border: 1px solid ${theme.colors.secondaryColor};
+        }
+
+        @media ${theme.media.phone} {
+            ${fonts.SizeNormal(theme)}
         }
     `}
 `;

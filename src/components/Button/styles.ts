@@ -1,5 +1,6 @@
 import styled, { css, DefaultTheme } from 'styled-components';
 
+import { fonts } from '../../styles/fonts';
 
 const BacgroundButton = {
 	premary: (theme: DefaultTheme) => css`
@@ -15,7 +16,7 @@ const BacgroundButton = {
 export const Conteiner = styled.button<{ kind: 'premary' | 'secondary' }>`
     ${({ theme, kind }) => css`
         padding: 1.5rem 5rem;
-        font-size: 1.6rem;
+        ${fonts.SizeSmall(theme)}
         font-weight: bold;
         ${BacgroundButton[kind](theme)}
         border: none;

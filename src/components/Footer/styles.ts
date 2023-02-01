@@ -1,7 +1,9 @@
 import styled, { css } from 'styled-components';
 
+import { fonts } from '../../styles/fonts';
+
 export const Conteiner = styled.footer`
-    ${() => css`
+    ${({ theme }) => css`
         padding: 0 11.25rem;
         padding-top: 7.2rem;
         padding-bottom: 7.2rem;
@@ -10,6 +12,14 @@ export const Conteiner = styled.footer`
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 5rem;
+
+
+        @media ${theme.media.phone} {
+            padding: 1.6rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.6rem;
+        }
     `}
 `;
 
@@ -17,7 +27,7 @@ export const Colunm = styled.div`
     ${({ theme }) => css`
         display: flex;
         flex-direction: column;
-        font-size: 2.2rem;
+        ${fonts.SizeSmall(theme)}
         gap: ${theme.spacings.small};
         margin-top: 8.1rem;
 
@@ -26,7 +36,7 @@ export const Colunm = styled.div`
         }
 
         h2, h3 {
-            font-size: 2.9rem;
+            ${fonts.SizeNormal(theme)}
         }
 
         h3 {
@@ -34,29 +44,42 @@ export const Colunm = styled.div`
         }
 
         p {
-            font-size: 2.2rem;
+            ${fonts.SizeSmall(theme)}
+        }
+
+        @media ${theme.media.phone} {
+            margin-top: 0;
         }
     
     `}
 `;
 
 export const ConteinerIcons = styled.div`
-    ${() => css`
+    ${({ theme }) => css`
         display: flex;
         gap: 1.6rem;
 
+        @media ${theme.media.phone} {
+            text-align: left;
+        }
+
         svg{
-            font-size: 2.5rem;
+            font-size: 2.2rem;
         }
     `}
 `;
 
 export const CopyRith = styled.div`
-    ${() => css`
+    ${({ theme }) => css`
         padding: 8rem 0 1rem;
-       font-size: 2rem;
-       color: #969696;
-       grid-column: span 4;
-       text-align: center;
+        ${fonts.SizeSmall(theme)}
+        color: #969696;
+        grid-column: span 4;
+        text-align: center;
+
+
+        @media ${theme.media.phone} {
+            padding: 1rem 0 1rem;
+        }
     `}
 `;

@@ -23,6 +23,9 @@ export const theme = {
 	},
 	media: {
 		lteMedium: '(max-width: 768px)',
+		phone: '(max-width: 780px)',
+		tablet: '(max-width: 950px)',
+		lapTop: '(max-width: 1500px)',
 	},
 	spacings: {
 		xsmall: '8rem',

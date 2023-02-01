@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { Conteiner as Button } from '../Button/styles';
+import { fonts } from '../../styles/fonts';
 
 export const Conteiner = styled.form`
     ${({ theme }) => css`
@@ -24,8 +25,22 @@ export const Conteiner = styled.form`
         & ${ Button } {
             padding: 2.1rem;
             width: 100%;
-            font-size: 2.1rem;
+            ${fonts.SizeSmall(theme)}
             font-weight: 600;
+        }
+
+        @media ${theme.media.phone} {
+            width: 100%;
+            height: 100%;
+            gap: 1.6rem;
+        }
+
+        @media ${theme.media.tablet} {
+            width: 100%;
+        }
+
+        @media ${theme.media.lapTop} {
+            width: 100%;
         }
     `}
 `;
