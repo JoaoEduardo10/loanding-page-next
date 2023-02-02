@@ -31,11 +31,12 @@ export const Form = () => {
 		await fetch('http://localhost:3000/api/sendEmil', {
 			method: 'POST',
 			headers: {
+				'Access-Control-Allow-Origin': '*',
 				'content-type': 'application/json'
 			},
 			body: JSON.stringify(messageBody)
 		});
-		
+
 		alert('Email enviado com sucesso');
 
 		setEmail('');
