@@ -18,7 +18,7 @@ export const Form = () => {
 	const [url, setUrl] = useState('');
 
 
-	const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 
 		const messageBody: MessgerBodyProps = {
@@ -28,7 +28,7 @@ export const Form = () => {
 			url
 		};
 
-		fetch('http://localhost:3000/api/sendEmil', {
+		await fetch('http://localhost:3000/api/sendEmil', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json'
