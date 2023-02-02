@@ -17,12 +17,14 @@ export default async function handler(req: any, res: any) {
 	});
 
 	try {
-		await client.sendAsync({
+		const messege = await client.sendAsync({
 			text: `Iai ${messageBody.name}, voçê recebeu esse email teste, de min,  jhon kkkk, Seu numero cadastrado foi: ${messageBody.number}, \n site: ${messageBody.url}\n\n. Não se precupe isso vai direto para voçê, não fica salvo...`,
 			from: 'joaoeduardoj55@gmail.com',
 			to: messageBody.email,
 			subject: 'Email teste',
 		});
+
+		console.log(messege);
 	} catch (err) {
 		console.error(err);
 	}
