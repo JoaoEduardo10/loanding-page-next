@@ -61,6 +61,7 @@ export const Image = styled.div`
 
         img {
             width: 100%;
+            height: 100%;
         }
 
         @media ${theme.media.phone} {

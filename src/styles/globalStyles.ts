@@ -10,12 +10,14 @@ export const GlobalStyled = createGlobalStyle`
 
     html {
         font-size: 62.5%;
+        scroll-behavior: smooth;
     }
 
     body {
         background-color: ${({ theme }) => theme.colors.primaryColor};
         color: ${({ theme }) => theme.colors.white};
         font-size: 1.6rem;
+        scroll-behavior: smooth;
     }
 
     ul, ol {

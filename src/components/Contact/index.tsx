@@ -6,7 +6,7 @@ export const Contact = () => {
 	const [loading, setLoading] = useState(false);
 
 	return (
-		<S.Conteiner>
+		<S.Conteiner id='contact'>
 			<S.Info>
 				<span>ENTRE EM CONTATO</span>
 				<h2>Aumente seu resultado de vendas e performance</h2>
