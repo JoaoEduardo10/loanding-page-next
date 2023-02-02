@@ -28,7 +28,7 @@ export const Form = () => {
 			url
 		};
 
-		await fetch('http://localhost:3000/api/sendEmil', {
+		await fetch('/api/sendEmil', {
 			method: 'POST',
 			headers: {
 				'Access-Control-Allow-Origin': '*',
