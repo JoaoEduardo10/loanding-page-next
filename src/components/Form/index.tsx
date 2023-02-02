@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { FormEvent } from 'react';
 import { Button } from '../Button';
 import { Input } from '../Input';
@@ -11,15 +11,20 @@ export type MessgerBodyProps = {
 	url: string
 }
 
-export const Form = () => {
+export type FormProps = {
+	setLoding: Dispatch<SetStateAction<boolean>>;
+	loading: boolean
+}
+
+export const Form = ({ loading, setLoding }: FormProps) => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [number, setNumber] = useState('');
 	const [url, setUrl] = useState('');
 
-
 	const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
+		setLoding(true);
 
 		const messageBody: MessgerBodyProps = {
 			email,
@@ -37,7 +42,7 @@ export const Form = () => {
 			body: JSON.stringify(messageBody)
 		});
 
-		alert('Email enviado com sucesso');
+		setLoding(false);
 
 		setEmail('');
 		setName('');
@@ -74,7 +79,7 @@ export const Form = () => {
 				value={url}
 			/>
 
-			<Button title='Enviar' kind='premary' />
+			<Button disabled={loading} title='Enviar' kind='premary' />
 		</S.Conteiner>
 	);
 };

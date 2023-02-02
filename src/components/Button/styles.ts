@@ -22,5 +22,11 @@ export const Conteiner = styled.button<{ kind: 'premary' | 'secondary' }>`
         border: none;
         border-radius: .5rem;
         cursor: pointer;
+
+
+        &:disabled {
+            background-color: ${theme.colors.mediumGray};
+            cursor: n-resize;
+        }
     `}
 `;

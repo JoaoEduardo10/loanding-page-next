@@ -4,6 +4,7 @@ import { fonts } from '../../styles/fonts';
 
 export const Conteiner = styled.section`
     ${({ theme }) => css`
+        position: relative;
         padding: 0 11.25rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -67,6 +68,7 @@ export const Info = styled.div`
             font-weight: 300;
             opacity: 0.7;
         }
+
     `}
 `;
 
@@ -96,6 +98,39 @@ export const Pragrafo = styled.p`
 
         @media ${theme.media.lapTop} {
             width: 100%;
+        }
+    `}
+`;
+
+export const Login = styled.div`
+    ${({ theme }) => css`
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            height: 6rem;
+            width: 6rem;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 1.2rem solid ${theme.colors.secondaryColor};
+            border-top: 1.2rem solid transparent;
+            animation: loading 1s infinite ease-in-out;
+        }
+
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     `}
 `;
