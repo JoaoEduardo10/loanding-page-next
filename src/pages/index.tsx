@@ -1,4 +1,3 @@
-import { GetServerSideProps } from 'next';
 import { Contact } from '../components/Contact';
 import { Features } from '../components/Features';
 import { Footer } from '../components/Footer';
@@ -16,10 +15,3 @@ export default function Home() {
 		</>
 	);
 }
-
-export const getServerSideProps:GetServerSideProps = async () => {
-	
-	return {
-		props: {}
-	}; 
-};
