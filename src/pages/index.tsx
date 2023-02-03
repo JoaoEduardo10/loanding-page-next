@@ -4,6 +4,8 @@ import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { Welcome } from '../components/Welcome';
 
+import { GetStaticProps } from 'next';
+
 export default function Home() {
 	return (
 		<>
@@ -15,3 +17,11 @@ export default function Home() {
 		</>
 	);
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+	
+
+	return {
+		props: {}
+	};
+};
