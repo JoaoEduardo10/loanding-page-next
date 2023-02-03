@@ -10,7 +10,7 @@ export default async function handler(req: any, res: any) {
 	const messageBody = req.body as MessgerBodyProps;
 
 	const emailJessica = (email: string) => {
-		if(email === 'Jessicalouriana2@gmail.com') {
+		if(email === 'jessicalouriana2@gmail.com') {
 			return `Oie princesa, bom se recebeu esse email unico feito exclusivamente para voçê uma deusa, quer dizer que minha logica encaixou kkkk. De antemão pesso que pedoe os erros de português kkkk, vida que segue.\n\n#FATOS SOBRE VOÇÊ;\n
 - És linda maravilhosa
 - Uma bela Profesora
@@ -41,7 +41,7 @@ Afirmo, Email feito unicamente para você "Jessica", nenhuma outra pessoa vai re
 	};
 
 	const subEmail = (email: string) => {
-		if(email === 'Jessicalouriana2@gmail.com') {
+		if(email === 'jessicalouriana2@gmail.com') {
 			return `Um email para a dama dificil`;
 		}
 
